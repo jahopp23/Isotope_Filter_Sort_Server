@@ -90,7 +90,8 @@ body {
 /* ---- isotope ---- */
 
 .grid {
-  border: 1px solid #333;
+  
+  width: 90%;
 }
 
 /* clear fix */
@@ -100,103 +101,103 @@ body {
   clear: both;
 }
 
+.element-item .card p {
+ 
+}
+
 /* ---- .element-item ---- */
 
 .element-item {
-  position: relative;
+/*  position: relative;
   float: left;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   margin: 5px;
-  padding: 10px;
+  padding: 10px;*/
 /*  background: #888;
   color: #262524;*/
 }
 
-.element-item > * {
+./*element-item > * {
   margin: 0;
   padding: 0;
 }
 
 .element-item .name {
   position: absolute;
-
-  left: 10px;
-  top: 60px;
+  display: block;
+  
   text-transform: none;
   letter-spacing: 0;
   font-size: 24px;
   font-weight: normal;
-}
+  width: 100%;
+}*/
+
+
+
 
 .element-item .texas {
-  position: absolute;
-  font-size: 1.00em;
-  font-weight: bold;
-  color: black;
-  display: inline-block;
+
+  
  
 }
 
 .element-item .number {
-  position: absolute;
-  right: 8px;
-  top: 5px;
+  
 }
 
 .element-item .oklahoma {
-  position: absolute;
-  font-size: 1.00em;
-  display: inline-block;
-  font-weight: bold;
-  left:5.00em;
+
+  
 }
 
 .element-item .arkansas{
-  position: absolute;
-  font-size: 1.00em;
-  left: 3.00em;
-  display: inline-block;
-  font-weight: bold;
+ 
 }
 
-.element-item.wire-and-cable{ background: #F00; background: hsl(   0, 100%, 50%); }
-.element-item.texas{ width:10% height:10%; }
-.element-item.oklahoma{ width:10% height:10%; }
-
+.card{
+  height: 200px;
+  width:200px;
+  margin-left: 2.50em;
+  margin-bottom: 2.50em;
+}
 
 </style>
   </head>
   <body>
     <h1>Isotope Filter</h1>
-<h4>Filter by Category</h4>
 
-<div class="col-lg-9">
+<div class="col-lg-12">
+<h4>filter by: Category</h4>
 <div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
   <button class="button" data-filter=".wire-and-cable">Wire & Cable</button>
   <button class="button" data-filter=".wire-and-cable-accessories">Wire & Cable Accessories</button>
   <button class="button" data-filter=".conduit-and-fittings">Conduit & Fittings</button>
   <button class="button" data-filter=".wiring-devices">Wiring Devices</button>
-  <button class="button" data-filter=".enclosures-and-wireway">Enclosures & Wireways</button>
+  <button class="button" data-filter=".enclosures-and-wireways">Enclosures & Wireways</button>
   <button class="button" data-filter=".lighting">Lighting</button>
   <button class="button" data-filter=".fuses">Fuses</button>
   <button class="button" data-filter=".tools-and-fasteners">Tools & Fasteners</button>
   <button class="button" data-filter=".motor-control">Motor Control</button>
   <button class="button" data-filter=".specialty">Specialty</button>
- <!--  <button class="button" data-filter="numberGreaterThan50">number > 50</button> -->
-  <!-- <button class="button" data-filter="ium">name ends with &ndash;ium</button> -->
+
 </div>
 </div>
 
-<h2>Filter 2</h2>
+<div class="col-lg-12">
+<h2>filter by: State</h2>
 <div id="filters-states" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
   <button class="button" data-filter=".texas">Texas</button>
   <button class="button" data-filter=".oklahoma">Oklahoma</button>
   <button class="button" data-filter=".arkansas">Arkansas</button>
   
 </div>
+</div>
 
-<!-- <h2>Sort</h2>
+
+<!-- 
+<h2>Sort</h2>
 <div id="sorts" class="button-group">  <button class="button is-checked" data-sort-by="original-order">original order</button>
   <button class="button" data-sort-by="name">name</button>
   <button class="button" data-sort-by="texas">Texas</button>
@@ -205,150 +206,211 @@ body {
   <button class="button" data-sort-by="number">number</button>
   <button class="button" data-sort-by="weight">weight</button>
   <button class="button" data-sort-by="category">category</button>
-</div> -->
-
+</div>
+ -->
 <div class="grid">
-  <div class="element-item specialty texas oklahoma arkansas" data-category="specialty texas oklahoma arkansas">
-    <h3 class="name">Air King</h3>
-    <p class="texas">TX</p>
-    <p class="oklahoma">OK</p>
-    <p class="arkansas">AK</p>
+  <div class="card element-item specialty texas oklahoma arkansas" data-filter="specialty texas oklahoma arkansas" style="width: 15rem;">
+    <div class="card-block">
+    <h4 class="card-title name">Air King</h4>
+    <p class="specialty card-text">Specialty</p>
+    <p class="texas card-text">TX</p>
+    <p class="oklahoma card-text">OK</p>
+    <p class="arkansas card-text">AR</p>
+   </div>
     
   </div>
-  <div class="element-item lighting texas oklahoma arkansas" data-category="lighting texas oklahoma arkansas">
-    <h3 class="name">EiKC</h3>
-    <p class="texas">TX</p>
-    <p class="oklahoma">OK</p>
-    <p class="arkansas">AK</p>
+  <div class="card element-item lighting texas oklahoma arkansas" data-filter="lighting texas oklahoma" style="width: 15rem;">
+    <div class="card-block">
+    <h4 class="card-title name">EiKC</h4>
+    <p class="card-text lighting">Lighting</p>
+    <p class="card-text texas">TX</p>
+    <p class="card-text oklahoma">OK</p>
+    <p class="card-text arkansas">AR</p>
+    </div>
    
   </div>
-  <div class="element-item wire-and-cable texas oklahoma arkansas" data-category="wire-and-cable texas oklahoma arkansas">
-    <h3 class="name">CME</h3>
-    <p class="texas">TX</p>
-    <p class="oklahoma">OK</p>
-    <p class="arkansas">AK</p>
+  <div class="card element-item wire-and-cable texas oklahoma arkansas" data-filter="wire-and-cable texas oklahoma arkansas">
+    <div class="card-block">
+    <h4 class="card-title name">CME</h4>
+    <p class="card-text wire-and-cable">Wire & Cable</p>
+    <p class="card-text texas">TX</p>
+    <p class="card-text oklahoma">OK</p>
+    <p class="card-text arkansas">AR</p>
+    </div>
    
   </div>
-  <div class="element-item wire-and-cable texas oklahoma" data-category="wire-and-cable texas oklahoma">
-    <h3 class="name">General Cable</h3>
-    <p class="texas">TX</p>
-    <p class="oklahoma">OK</p>
+  <div class="card element-item wire-and-cable texas oklahoma" data-filter="wire-and-cable texas oklahoma">
+    <div class="card-block">
+    <h4 class="card-title name">General Cable</h4>
+    <p class="card-text wire-and-cable">Wire & Cable</p>
+    <p class="card-text texas">TX</p>
+    <p class="card-text oklahoma">OK</p>
+    </div>
     
   </div>
-  <div class="element-item conduit-and-fittings enclosures-and-wireway texas oklahoma" data-category="conduit-and-fittings enclosures-and-wireway texas oklahoma">
-    <h3 class="name">EATON B-Line Series</h3>
-    <p class="texas">TX</p>
-    <p class="oklahoma">OK</p>
+  <div class="card element-item conduit-and-fittings enclosures-and-wireways texas oklahoma" data-filter="conduit-and-fittings enclosures-and-wireways texas oklahoma">
+    <div class="card-block">
+    <h4 class="card-text name">EATON B-Line Series</h4>
+    <p class="card-text conduit-and-fittings">Conduit & Fittings</p>
+    <p class="card-text enclosures-and-wireways">Enclosures & Wireways</p>
+    <p class="card-text texas">TX</p>
+    <p class="card-text oklahoma">OK</p>
+  <!--   <p class="texas">TX</p>
+    <p class="oklahoma">OK</p> -->
+   </div>
    
   </div>
-  <div class="element-item conduit-and-fittings motor-control texas oklahoma" data-category="conduit-and-fittings motor-control texas oklahoma">
-    <h3 class="name">EATON Crouse-Hinds</h3>
-    <p class="texas">TX</p>
-    <p class="oklahoma">Oklahoma</p>
+  <div class="card element-item conduit-and-fittings motor-control texas oklahoma" data-filter="conduit-and-fittings motor-control texas oklahoma">
+    <div class="card-block">
+    <h4 class="name card-text">EATON Crouse-Hinds</h4>
+    <p class="conduit-and-fittings card-text">Conduit & Fittings</p>
+    <p class="motor-control card-text">Motor Control</p>
+    <p class="texas card-text">TX</p>
+    <p class="oklahoma card-text">OK</p>
+    </div>
    
   </div>
-  <div class="element-item wiring-devices texas oklahoma arkansas" data-category="wiring-devices texas oklahoma arkansas">
-    <h3 class="name">EATON Wiring Device Series</h3>
-    <p class="texas">TX</p>
-    <p class="oklahoma">OK</p>
-    <p class="arkansas">AK</p>
+  <div class="card element-item wiring-devices texas oklahoma arkansas" data-filter="wiring-devices texas oklahoma arkansas">
+    <div class="card-block">
+    <h4 class="name card-text">EATON Wiring Device Series</h4>
+    <p class="wiring-devices card-text">Wiring Devices</p>
+    <p class="texas card-text">TX</p>
+    <p class="oklahoma card-text">OK</p>
+    <p class="arkansas card-text">AR</p>
+    </div>
    
   </div>
-  <div class="element-item fuses texas oklahoma arkansas" data-category="fuses texas oklahoma arkansas">
-    <h3 class="name">Edison by EATON</h3>
-    <p class="texas">TX</p>
-    <p class="oklahoma">OK</p>
-    <p class="arkansas">AK</p>
+  <div class="card element-item fuses texas oklahoma arkansas" data-filter="fuses texas oklahoma">
+    <div class="card-block">
+    <h4 class="name card-text">Edison by EATON</h4>
+    <p class="fuses card-text">Fuses</p>
+    <p class="texas card-text">TX</p>
+    <p class="oklahoma card-text">OK</p>
+    <p class="arkansas card-text">AR</p>
+    </div>
    
   </div>
-  <div class="element-item fuses oklahoma arkansas" data-category="fuses oklahoma arkansas">
-    <h3 class="name">EATON Bussman Series</h3>
-    <p class="oklahoma">OK</p>
-    <p class="arkansas">AK</p>
+  <div class="card element-item fuses oklahoma arkansas" data-filter="fuses oklahoma arkansas">
+    <div class="card-block">
+    <h4 class="name card-text">EATON Bussman Series</h4>
+    <p class="fuses card-text">Fuses</p>
+    <p class="oklahoma card-text">OK</p>
+    <p class="arkansas card-text">AR</p>
   </div>
-  <div class="element-item wire-and-cable-accessories lighting tools-and-fasteners texas oklahoma" data-category="wire-and-cable-accessories lighting tools-and-fasteners texas oklahoma">
-    <h3 class="name">NSi Industries</h3>
-    <p class="texas">TX</p>
-    <p class="oklahoma">OK</p>
+  </div>
+  <div class="card element-item wire-and-cable-accessories lighting tools-and-fasteners texas oklahoma" data-filter="wire-and-cable-accessories lighting tools-and-fasteners texas oklahoma">
+    <div class="card-block">
+    <h4 class="name card-title">NSi Industries</h4>
+    <p class="wire-and-cable-accessories card-title">Wire & Cable Accessories</p>
+    <p class="lighting card-title">Lighting</p>
+    <p class="tools-and-fasteners card-title">Tools & Fasteners</p>
+    <p class="texas card-title">TX</p>
+    <p class="oklahoma card-title">OK</p>
+  </div>
    
   </div>
-  <div class="element-item wire-and-cable-accessories conduit-and-fittings tools-and-fasteners texas" data-category="conduit-and-fittings wire-and-cable-accessories tools-and-fasteners texas">
-    <h3 class="name">Dottie</h3>
+  <div class="card element-item dottie wire-and-cable-accessories conduit-and-fittings tools-and-fasteners texas" data-filter="wire-and-cable-accessories conduit-and-fittings tools-and-fasteners">
+    <div class="card-block">
+    <h4 class="name">Dottie</h4>
+    <p class="wire-and-cable-accessories">Wire & Cable Accessories</p>
+    <p class="conduit-and-fittings">Conduit & Fittings</p>
+    <p class="tools-and-fasteners">Tools & Fasteners</p>
+
+    <p class="texas">TX</p>
+    </div>
+
+    
+  </div>
+  <div class="card element-item wire-and-cable texas" data-filter="wire-and-cable texas">
+    <h4 class="name">Galvan Electric</h4>
+    <p class="wire-and-cable">Wire & Cable</p>
+    <p class="texas">TX</p>
+   
+  </div>
+  <div class="card element-item enclosures-and-wireways texas" data-filter="enclosures-and-wireways texas">
+    <h4 class="name">MacLean Highline</h4>
+    <p class="enclosures-and-wireways">Enclosures & Wireways</p>
     <p class="texas">TX</p>
     
   </div>
-  <div class="element-item wire-and-cable texas" data-category="wire-and-cable texas">
-    <h3 class="name">Galvan Electric</h3>
-    <p class="texas">TX</p>
-   
-  </div>
-  <div class="element-item enclosures-and-wireway texas" data-category="enclosures-and-wireway texas">
-    <h3 class="name">MacLean Highline</h3>
-    <p class="texas">TX</p>
-    
-  </div>
-  <div class="element-item conduit-and-fittings texas" data-category="conduit-and-fittings texas">
-    <h3 class="name">IPEX</h3>
+  <div class="card element-item conduit-and-fittings texas" data-filter="conduit-and-fittings texas">
+    <h4 class="name">IPEX</h4>
+    <p class="conduit-and-fittings">Conduit & Fittings</p>
     <p class="texas">TX</p>
 
   </div>
-  <div class="element-item conduit-and-fittings texas oklahoma" data-category="conduit-and-fittings texas oklahoma">
-    <h3 class="name">NEC INC.</h3>
+  <div class="card element-item conduit-and-fittings texas oklahoma" data-filter="conduit-and-fittings texas oklahoma">
+    <h4 class="name">NEC INC.</h4>
+    <p class="conduit-and-fittings">Conduit & Fittings</p>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
    
   </div>
-  <div class="element-item conduit-and-fittings texas" data-category="conduit-and-fittings texas">
-    <h3 class="name">Patriot Industries</h3>
+  <div class="card element-item conduit-and-fittings texas" data-filter="conduit-and-fittings texas">
+    <h4 class="name">Patriot Industries</h4>
+    <p class="conduit-and-fittings">Conduit & Fittings</p>
     <p class="texas">TX</p>
    
   </div>
-  <div class="element-item conduit-and-fittings texas" data-category="conduit-and-fittings texas">
-    <h3 class="name">Prime Conduit</h3>
+  <div class="card element-item conduit-and-fittings texas" data-filter="conduit-and-fittings texas">
+    <h4 class="name">Prime Conduit</h4>
+    <p class="conduit-and-fittings">Conduit & Fittings</p>
     <p class="texas">TX</p>
     
   </div>
-  <div class="element-item specialty texas oklahoma" data-category="specialty texas oklahoma">
-    <h3 class="name">American Polywater Corporation</h3>
+  <div class="card element-item specialty texas oklahoma" data-filter="specialty texas oklahoma">
+    <h4 class="name">American Polywater Corporation</h4>
+    <p class="specialty">Specialty</p>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
    
   </div>
-  <div class="element-item motor-control texas oklahoma arkansas" data-category="motor-control texas oklahoma arkansas">
-    <h3 class="name">Spike</h3>
+  <div class="card element-item motor-control texas oklahoma arkansas" data-filter="motor-control texas oklahoma arkansas">
+    <h4 class="name">Spike</h4>
+    <p class="motor-control">Motor Control</p>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
-    <p class="arkansas">AK</p>
+    <p class="arkansas">AR</p>
    
   </div>
-  <div class="element-item enclosures-and-wireways oklahoma" data-category="enclosures-and-wireways oklahoma">
-    <h3 class="name">Western Tube</h3>
+  <div class="card element-item enclosures-and-wireways oklahoma" data-filter="enclosures-and-wireways oklahoma">
+    <h4 class="name">Western Tube</h4>
+    <p class="enclosures-and-wireways">Enclosures & Wireways</p>
     <p class="oklahoma">OK</p>
   
   </div>
-    <div class="element-item tools-and-fasteners oklahoma" data-category="tools-and-fasteners oklahoma">
-    <h3 class="name">Lenox</h3>
+    <div class="card element-item tools-and-fasteners oklahoma" data-filter="tools-and-fasteners oklahoma">
+    <p class="tools-and-fasteners">Tools & Fasteners</p>
     <p class="oklahoma">OK</p>
     
   </div>
-  <div class="element-item tools-and-fasteners oklahoma" data-category="tools-and-fasteners oklahoma">
-    <h3 class="name">Irwin Tools</h3>
+  <div class="card element-item tools-and-fasteners oklahoma" data-filter="tools-and-fasteners oklahoma">
+    <h4 class="name">Irwin Tools</h4>
+    <p class="tools-and-fasteners">Tools & Fasteners</p>
     <p class="oklahoma">OK</p>
   
   </div>
-  <div class="element-item specialty oklahoma" data-category="specialty oklahoma">
-    <h3 class="name">DYMO</h3>
+  <div class="card element-item specialty oklahoma" data-filter="specialty oklahoma"s>
+    <h4 class="name">DYMO</h4>
+    <p class="specialty">Specialty</p>
     <p class="oklahoma">OK</p>
   
   </div>
- <div class="element-item tools-and-fasteners oklahoma" data-category="tools-and-fasteners oklahoma">
-    <h3 class="name">DeWALT</h3>
+ <div class="card element-item tools-and-fasteners oklahoma" data-filter="tools-and-fasteners oklahoma">
+    <h4 class="name">DeWALT</h4>
+    <div class="card-block">
+    <p class="tools-and-fasteners">Tools & Fasteners</p>
     <p class="oklahoma">OK</p>
+  </div>
   
   </div>
-  <div class="element-item specialty oklahoma" data-category="speciality oklahoma">
-    <h3 class="name">Sharpie</h3>
-    <p class="oklahoma">OK</p>
+  <div class="card element-item specialty oklahoma" data-filter="specialty oklahoma">
+
+    <h4 class="name card-title">Sharpie</h4>
+    <div class="card-block">
+    <p class="specialty card-text">Specialty</p>
+    <p class="oklahoma card-text">OK</p>
+  </div>
    
   </div>
 
@@ -375,24 +437,103 @@ var $grid = $('.grid').isotope({
   itemSelector: '.element-item',
   layoutMode: 'fitRows',
   getSortData: {
-    name: '.name',
-    texas: '.texas',
-    oklahoma: '.oklahoma',
-    arkansas: '.arkansas',
-    number: '.number parseInt',
-    category: '[data-category]',
+    // name: '.name',
+    // // wire-and-cable: '.wire-and-cable',
+    // // wire-and-cable-accessories: '.wire-and-cable-accessories';
+    // // conduit-and-fittings: '.conduit-and-fittings',
+    // // wiring-devices: '.wiring-devices',
+    // // enclosures-and-wireways: '.enclosures-and-wireways',
+    // // lighting: '.lighting',
+    // // fuses: '.fuses',
+    // // tools-and-fasteners: '.tools-and-fasteners',
+    // // motor-control: '.motor-control',
+    // // specialty: '.specialty',
+    // texas: '.texas',
+    // oklahoma: '.oklahoma',
+    // arkansas: '.arkansas',
+    // number: '.number parseInt',
+    state: '[data-state]',
+
     texas: function( itemElem ) {
       var texas = $( itemElem ).find('.texas').text();
       return;
     },
+
+    oklahoma: function( itemElem ){
+      var oklahoma = $( itemElem ).find('.oklahoma').text();
+      return;
+    },
+
+    arkansas: function( itemElem ){
+      var arkansas = $( itemElem ).find('arkansas').text();
+      return;
+    },
+
+    category: '[data-category]',
+    wireCable: function( itemElem ) {
+      var wireCable = $( itemElem ).find('.wire-and-cable').text();
+      return;
+    },
+
+    wireCableAccessories: function( itemElem ) {
+      var wireCableAccessories = $( itemElem ).find('.wire-and-cable-accessories').text();
+      return;
+    },
+
+    conduitFittings: function( itemElem ) {
+      var conduitFittings = $( itemElem ).find('.conduit-and-fittings').text();
+      return;
+    },
+
+    wiringDevices: function( itemElem ){
+      var wireDevices = $( itemElem ).find('.wiring-devices').text();
+      return;
+    },
+
+    enclosuresWireways: function( itemElem ){
+      var enclosuresWireways = $( itemElem ).find('.enclosures-and-wireways').text();
+      return;
+    },
+
+    lighting: function( itemElem ){
+      var lighting = $( itemElem ).find('lighting').text();
+      return;
+    },
+
+    fuses: function( itemElem ){
+      var fuses = $( itemElem ).find('.fuses').text();
+      return;
+    },
+
+    toolsFasteners: function( itemElem ){
+      var toolsFasteners = $( itemElem ).find('.tools-and-fasteners').text();
+      return;
+    },
+
+    motorControl: function( itemElem ){
+      var motorControl = $( itemElem ).find('motor-control').text();
+      return;
+    },
+
+    specialty: function( itemElem ){
+      var specialty = $( itemElem ).find('specialty').text();
+      return;
+    },
+
+
+    texas: function( itemElem ) {
+      var texas = $( itemElem ).find('.texas').text();
+      return;
+    },
+
     oklahoma: function(  itemElem ) {
       var oklahoma = $( itemElem ).find('.oklahoma').text();
       return;
     },
     arkansas: function( itemElem ) {
       var arkansas = $( itemElem ).find('.arkansas').text();
-    },
-
+      return;
+    }
   }
 
 });
@@ -402,10 +543,67 @@ console.log("Isotope Function Intialized...");
 // filter functions
 var filterFns = {
   // show if number is greater than 50
-  numberGreaterThan50: function() {
-    var number = $(this).find('.number').text();
-    return parseInt( number, 10 ) > 50;
+  texas: function( itemElem ) {
+    var texas = $( itemElem ).find('.texas').text();
+    return;
   },
+  arkansas: function( itemElem ) {
+    var arkansas = $( itemElem ).find('.arkansas').text();
+    return;
+  },
+  oklahoma: function( itemElem ) {
+    var oklahoma = $( itemElem ).find('.oklahoma').text();
+    return;
+  },
+   wireCable: function( itemElem ) {
+      var wireCable = $( itemElem ).find('.wire-and-cable').text();
+      return;
+    },
+
+    wireCableAccessories: function( itemElem ) {
+      var wireCableAccessories = $( itemElem ).find('.wire-and-cable-accessories').text();
+      return;
+    },
+
+    conduitFittings: function( itemElem ) {
+      var conduitFittings = $( itemElem ).find('.conduit-and-fittings').text();
+      return;
+    },
+
+    wiringDevices: function( itemElem ){
+      var wireDevices = $( itemElem ).find('.wiring-devices').text();
+      return;
+    },
+
+    enclosuresWireways: function( itemElem ){
+      var enclosuresWireways = $( itemElem ).find('.enclosures-and-wireways').text();
+      return;
+    },
+
+    lighting: function( itemElem ){
+      var lighting = $( itemElem ).find('lighting').text();
+      return;
+    },
+
+    fuses: function( itemElem ){
+      var fuses = $( itemElem ).find('.fuses').text();
+      return;
+    },
+
+    toolsFasteners: function( itemElem ){
+      var toolsFasteners = $( itemElem ).find('.tools-and-fasteners').text();
+      return;
+    },
+
+    motorControl: function( itemElem ){
+      var motorControl = $( itemElem ).find('motor-control').text();
+      return;
+    },
+
+    specialty: function( itemElem ){
+      var specialty = $( itemElem ).find('specialty').text();
+      return;
+    }
   // show if name ends with -ium
   // ium: function() {
   //   var name = $(this).find('.name').text();
@@ -443,6 +641,7 @@ $('#sorts').on( 'click', 'button', function() {
   console.log("Sorting Intialized.");
   var sortByValue = $(this).attr('data-sort-by');
   $grid.isotope({ sortBy: sortByValue });
+
 });
 
 // change is-checked class on buttons
