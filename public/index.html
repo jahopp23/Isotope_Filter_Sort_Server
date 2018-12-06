@@ -15,7 +15,7 @@
 
     
 
-    <title>Isotope Filter UI</title>
+    <title>Isotope Double Filter UI</title>
 <style>
 * { box-sizing: border-box; }
 
@@ -64,8 +64,8 @@ body {
 .button-group {
   margin-bottom: 20px;
   width: 100%;
-  display: flex;
-  flex-direction:row;
+ 
+  
   padding-top:1.00em;
   padding-bottom:1.00em;
   background-color:black;
@@ -161,23 +161,17 @@ body {
 }
 
 .element-item.wire-and-cable{ background: #F00; background: hsl(   0, 100%, 50%); }
-.element-item.alkaline-earth  { background: #F80; background: hsl(  36, 100%, 50%); }
-.element-item.lanthanoid      { background: #FF0; background: hsl(  72, 100%, 50%); }
-.element-item.actinoid        { background: #0F0; background: hsl( 108, 100%, 50%); }
-.element-item.texas{ background: #0F8; background: hsl( 144, 100%, 50%); }
-.element-item.oklahoma{ background: #0F8; background: hsl( 144, 100%, 50%); }
-.element-item.arkansas{ background: #0F8; background: hsl( 144, 100%, 50%); }
-.element-item.post-transition { background: #0FF; background: hsl( 180, 100%, 50%); }
-.element-item.metalloid       { background: #08F; background: hsl( 216, 100%, 50%); }
-.element-item.diatomic        { background: #00F; background: hsl( 252, 100%, 50%); }
-.element-item.halogen         { background: #F0F; background: hsl( 288, 100%, 50%); }
-.element-item.noble-gas       { background: #F08; background: hsl( 324, 100%, 50%); }
+.element-item.texas{ width:10% height:10%; }
+.element-item.oklahoma{ width:10% height:10%; }
+
 
 </style>
   </head>
   <body>
     <h1>Isotope Filter</h1>
 <h4>Filter by Category</h4>
+
+<div class="col-lg-9">
 <div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
   <button class="button" data-filter=".wire-and-cable">Wire & Cable</button>
   <button class="button" data-filter=".wire-and-cable-accessories">Wire & Cable Accessories</button>
@@ -192,14 +186,15 @@ body {
  <!--  <button class="button" data-filter="numberGreaterThan50">number > 50</button> -->
   <!-- <button class="button" data-filter="ium">name ends with &ndash;ium</button> -->
 </div>
+</div>
 
-<!-- <h2>Filter 2</h2>
-<div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
+<h2>Filter 2</h2>
+<div id="filters-states" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
   <button class="button" data-filter=".texas">Texas</button>
   <button class="button" data-filter=".oklahoma">Oklahoma</button>
   <button class="button" data-filter=".arkansas">Arkansas</button>
   
-</div> -->
+</div>
 
 <!-- <h2>Sort</h2>
 <div id="sorts" class="button-group">  <button class="button is-checked" data-sort-by="original-order">original order</button>
@@ -213,14 +208,14 @@ body {
 </div> -->
 
 <div class="grid">
-  <div class="element-item wire-and-cable specialty texas" data-category="wire-and-cable specialty texas">
+  <div class="element-item specialty texas oklahoma arkansas" data-category="specialty texas oklahoma arkansas">
     <h3 class="name">Air King</h3>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
     <p class="arkansas">AK</p>
     
   </div>
-  <div class="element-item lighting" data-category="lighting">
+  <div class="element-item lighting texas oklahoma arkansas" data-category="lighting texas oklahoma arkansas">
     <h3 class="name">EiKC</h3>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
@@ -234,123 +229,124 @@ body {
     <p class="arkansas">AK</p>
    
   </div>
-  <div class="element-item wire-and-cable texas oklahoma" data-category="wire-and-cable">
+  <div class="element-item wire-and-cable texas oklahoma" data-category="wire-and-cable texas oklahoma">
     <h3 class="name">General Cable</h3>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
     
   </div>
-  <div class="element-item conduit-and-fittings enclosures-and-wireway" data-category="conduit-and-fittings enclosures-and-wireway">
+  <div class="element-item conduit-and-fittings enclosures-and-wireway texas oklahoma" data-category="conduit-and-fittings enclosures-and-wireway texas oklahoma">
     <h3 class="name">EATON B-Line Series</h3>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
    
   </div>
-  <div class="element-item conduit-and-fittings motor-control" data-category="conduit-and-fittings motor-control">
+  <div class="element-item conduit-and-fittings motor-control texas oklahoma" data-category="conduit-and-fittings motor-control texas oklahoma">
     <h3 class="name">EATON Crouse-Hinds</h3>
     <p class="texas">TX</p>
+    <p class="oklahoma">Oklahoma</p>
    
   </div>
-  <div class="element-item wiring-devices" data-category="wiring-devices">
+  <div class="element-item wiring-devices texas oklahoma arkansas" data-category="wiring-devices texas oklahoma arkansas">
     <h3 class="name">EATON Wiring Device Series</h3>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
     <p class="arkansas">AK</p>
    
   </div>
-  <div class="element-item fuses" data-category="fuses">
+  <div class="element-item fuses texas oklahoma arkansas" data-category="fuses texas oklahoma arkansas">
     <h3 class="name">Edison by EATON</h3>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
     <p class="arkansas">AK</p>
    
   </div>
-  <div class="element-item fuses" data-category="fuses">
+  <div class="element-item fuses oklahoma arkansas" data-category="fuses oklahoma arkansas">
     <h3 class="name">EATON Bussman Series</h3>
     <p class="oklahoma">OK</p>
     <p class="arkansas">AK</p>
   </div>
-  <div class="element-item wire-and-cable-accessories lighting tools-and-fasteners" data-category="wire-and-cable-accessories lighting tools-and-fasteners">
+  <div class="element-item wire-and-cable-accessories lighting tools-and-fasteners texas oklahoma" data-category="wire-and-cable-accessories lighting tools-and-fasteners texas oklahoma">
     <h3 class="name">NSi Industries</h3>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
    
   </div>
-  <div class="element-item wire-and-cable-accessories conduit-and-fittings tools-and-fasteners" data-category="conduit-and-fittings wire-and-cable-accessories tools-and-fasteners">
+  <div class="element-item wire-and-cable-accessories conduit-and-fittings tools-and-fasteners texas" data-category="conduit-and-fittings wire-and-cable-accessories tools-and-fasteners texas">
     <h3 class="name">Dottie</h3>
     <p class="texas">TX</p>
     
   </div>
-  <div class="element-item wire-and-cable texas" data-category="wire-and-cable">
+  <div class="element-item wire-and-cable texas" data-category="wire-and-cable texas">
     <h3 class="name">Galvan Electric</h3>
     <p class="texas">TX</p>
    
   </div>
-  <div class="element-item enclosures-and-wireway" data-category="enclosures-and-wireway">
+  <div class="element-item enclosures-and-wireway texas" data-category="enclosures-and-wireway texas">
     <h3 class="name">MacLean Highline</h3>
     <p class="texas">TX</p>
     
   </div>
-  <div class="element-item conduit-and-fittings" data-category="conduit-and-fittings">
+  <div class="element-item conduit-and-fittings texas" data-category="conduit-and-fittings texas">
     <h3 class="name">IPEX</h3>
     <p class="texas">TX</p>
 
   </div>
-  <div class="element-item conduit-and-fittings" data-category="conduit-and-fittings">
+  <div class="element-item conduit-and-fittings texas oklahoma" data-category="conduit-and-fittings texas oklahoma">
     <h3 class="name">NEC INC.</h3>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
    
   </div>
-  <div class="element-item conduit-and-fittings" data-category="conduit-and-fittings">
+  <div class="element-item conduit-and-fittings texas" data-category="conduit-and-fittings texas">
     <h3 class="name">Patriot Industries</h3>
     <p class="texas">TX</p>
    
   </div>
-  <div class="element-item conduit-and-fittings" data-category="conduit-and-fittings">
+  <div class="element-item conduit-and-fittings texas" data-category="conduit-and-fittings texas">
     <h3 class="name">Prime Conduit</h3>
     <p class="texas">TX</p>
     
   </div>
-  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+  <div class="element-item specialty texas oklahoma" data-category="specialty texas oklahoma">
     <h3 class="name">American Polywater Corporation</h3>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
    
   </div>
-  <div class="element-item motor-control" data-category="motor-control">
+  <div class="element-item motor-control texas oklahoma arkansas" data-category="motor-control texas oklahoma arkansas">
     <h3 class="name">Spike</h3>
     <p class="texas">TX</p>
     <p class="oklahoma">OK</p>
     <p class="arkansas">AK</p>
    
   </div>
-  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+  <div class="element-item enclosures-and-wireways oklahoma" data-category="enclosures-and-wireways oklahoma">
     <h3 class="name">Western Tube</h3>
     <p class="oklahoma">OK</p>
   
   </div>
-    <div class="element-item tools-and-fasteners" data-category="tools-and-fasteners">
+    <div class="element-item tools-and-fasteners oklahoma" data-category="tools-and-fasteners oklahoma">
     <h3 class="name">Lenox</h3>
     <p class="oklahoma">OK</p>
     
   </div>
-  <div class="element-item tools-and-fasteners" data-category="tools-and-fasteners">
+  <div class="element-item tools-and-fasteners oklahoma" data-category="tools-and-fasteners oklahoma">
     <h3 class="name">Irwin Tools</h3>
     <p class="oklahoma">OK</p>
   
   </div>
-  <div class="element-item specialty " data-category="specialty">
+  <div class="element-item specialty oklahoma" data-category="specialty oklahoma">
     <h3 class="name">DYMO</h3>
     <p class="oklahoma">OK</p>
   
   </div>
- <div class="element-item tools-and-fasteners" data-category="tools-and-fasteners">
+ <div class="element-item tools-and-fasteners oklahoma" data-category="tools-and-fasteners oklahoma">
     <h3 class="name">DeWALT</h3>
     <p class="oklahoma">OK</p>
   
   </div>
-  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+  <div class="element-item specialty oklahoma" data-category="speciality oklahoma">
     <h3 class="name">Sharpie</h3>
     <p class="oklahoma">OK</p>
    
@@ -388,7 +384,15 @@ var $grid = $('.grid').isotope({
     texas: function( itemElem ) {
       var texas = $( itemElem ).find('.texas').text();
       return;
-    }
+    },
+    oklahoma: function(  itemElem ) {
+      var oklahoma = $( itemElem ).find('.oklahoma').text();
+      return;
+    },
+    arkansas: function( itemElem ) {
+      var arkansas = $( itemElem ).find('.arkansas').text();
+    },
+
   }
 
 });
@@ -403,10 +407,10 @@ var filterFns = {
     return parseInt( number, 10 ) > 50;
   },
   // show if name ends with -ium
-  ium: function() {
-    var name = $(this).find('.name').text();
-    return name.match( /ium$/ );
-  }
+  // ium: function() {
+  //   var name = $(this).find('.name').text();
+  //   return name.match( /ium$/ );
+  // }
 };
 
 console.log("Filters Enabled.");
@@ -416,6 +420,15 @@ console.log("Filters Enabled.");
 
 // bind filter button click
 $('#filters').on( 'click', 'button', function() {
+  console.log("Filter Button Initialized.");
+  var filterValue = $( this ).attr('data-filter');
+  // use filterFn if matches value
+  filterValue = filterFns[ filterValue ] || filterValue;
+  $grid.isotope({ filter: filterValue });
+  
+});
+
+$('#filters-states').on( 'click', 'button', function() {
   console.log("Filter Button Initialized.");
   var filterValue = $( this ).attr('data-filter');
   // use filterFn if matches value
