@@ -1,5 +1,177 @@
+* { box-sizing: border-box; }
+
 body {
-    max-width: 50em;
-    margin: auto;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: arial;
+  background-color: #eee;
+  text-align: center;
 }
+
+
+/* ---- button ---- */
+
+.button {
+  display: inline-block;
+  padding: 0.1em 1.0em;
+  /*background: #EEE;*/
+  border: none;
+  border-radius: 1.00em;
+  /*background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) )*/;
+  /*color: #222;*/
+  font-family: arial;
+  font-size: 1.25em;
+ 
+  cursor: pointer;
+  
+}
+
+.button:hover {
+  
+ 
+  color: #222;
+}
+
+.button:active,
+.button.is-checked {
+  color: white;
+}
+
+.button.is-checked {
+   background-color: blue;
+}
+
+.button:active {
+
+}
+
+/* ---- button-group ---- */
+
+.button-group {
+  margin-bottom: 20px;
+  width: 100%;
+ 
+  
+  padding-top:1.00em;
+  padding-bottom:1.00em;
+ 
+}
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  /*float: left;*/
+  border-radius: 0.25em;
+
+  margin-top: 1.00em;
+
+
+}
+
+.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
+.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
+
+/* ---- isotope ---- */
+
+.grid {
+  
+  width: 100%;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.element-item .card p {
+ 
+}
+
+/* ---- .element-item ---- */
+
+.element-item {
+/*  position: relative;
+  float: left;
+  width: 400px;
+  height: 400px;
+  margin: 5px;
+  padding: 10px;*/
+/*  background: #888;
+  color: #262524;*/
+}
+
+./*element-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+.element-item .name {
+  position: absolute;
+  display: block;
+  
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 24px;
+  font-weight: normal;
+  width: 100%;
+}*/
+
+
+
+
+.element-item .texas {
+
+  
+ 
+}
+
+.element-item .number {
+  
+}
+
+.element-item .oklahoma {
+
+  
+}
+
+.element-item .arkansas{
+ 
+}
+
+.card{
+  height: 300px;
+  width: 300px;
+  margin-left: 2.50em;
+  margin-bottom: 2.50em;
+  border: solid 1px black;
+}
+
+.jumbotron { 
+
+   margin-top: 3.00em;
+   text-align: center;
+   background-color: white;
+
+ }
+
+
+
+ .container {
+  width: 100%;
+ }
+
+ .card-title {
+  margin-top: 3.00em;
+ }
+
+ .card p {
+  line-height: 1.00em;
+  font-weight: bold;
+ }
+
+
+
