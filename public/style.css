@@ -147,7 +147,8 @@ body {
   width: 300px;
   margin-left: 2.50em;
   margin-bottom: 2.50em;
-  border: solid 1px black;
+ 
+  box-shadow: 3px 3px #F0F0F0, 0em 0 0.4em #696969;
 }
 
 .jumbotron { 
@@ -169,8 +170,18 @@ body {
  }
 
  .card p {
-  line-height: 1.00em;
+  line-height: 0.00em;
+  display: inline;
+  padding-left: 1.00em;
+  font-size: 1.50em;
+  padding-right: 1.00em;
+  font-weight: 300;
+ 
+ }
+
+ .card .card-title {
   font-weight: bold;
+  font-size: 1.50em;
  }
 
 
