@@ -7,6 +7,8 @@ body {
 }
 
 
+
+
 /* ---- button ---- */
 
 .button {
@@ -173,7 +175,7 @@ body {
   line-height: 0.00em;
   display: inline;
   padding-left: 1.00em;
-  font-size: 1.50em;
+  font-size: 1.00em;
   padding-right: 1.00em;
   font-weight: 300;
  
