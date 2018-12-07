@@ -1,0 +1,26 @@
+
+Isotope Filtering User Interace HTML, CSS3, JavaScipt, Jquery
+
+sources: https://isotope.metafizzy.co/
+
+
+start: 3:00PM
+end: 10:00PM
+Tasks Perofmed: Intial research on isotope js,construction; Building of original user interface, and entering the function with private brand data.
+Total Hours: 7
+Total Market Price @ $35/hour: $245.00
+Total Discount Price @ $20/hour: $140.00
+
+Start: 12:00AM
+End: 4:00AM
+Tasks: Improve isotope.js filter functions, input data for all brand and brand attributes(states,categories) within <data-filter="">
+       Improve UI components with Bootstrap v4.0 (cards)
+Total Hours: 4 
+Total Market Price @ $35/hour: $140.00
+Total Discount Price @ $20/hour: $120.00
+
+Total Hours: 11.00
+Total Current Market Value: $385.00 
+Total Current Discount Value: $220.00
+   
+

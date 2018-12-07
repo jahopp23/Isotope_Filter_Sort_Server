@@ -1,0 +1,18 @@
+12/6/2018
+
+Isotope Function Round 1
+Status: Success
+
+
+market rate: $40/hour 
+time expended: 10 Hours 
+Amount Due: $400 
+
+friend rate: $20/hour 
+time expended: 10 Hours 
+Amount Due: $200
+
+
+Round 2: UI Bootstraping 
+
+

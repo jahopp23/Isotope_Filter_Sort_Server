@@ -21,7 +21,9 @@
 
 body {
   font-family: arial;
+  background-color:black;
 }
+
 
 /* ---- button ---- */
 
@@ -68,7 +70,7 @@ body {
   
   padding-top:1.00em;
   padding-bottom:1.00em;
-  background-color:black;
+ 
 }
 
 .button-group:after {
@@ -91,7 +93,7 @@ body {
 
 .grid {
   
-  width: 90%;
+  width: 100%;
 }
 
 /* clear fix */
@@ -157,43 +159,40 @@ body {
 }
 
 .card{
-  height: 200px;
-  width:200px;
+  height: 300px;
+  width: 300px;
   margin-left: 2.50em;
   margin-bottom: 2.50em;
+  border: solid 1px black;
 }
+
+.jumbotron { 
+
+   margin-bottom: 20.00em;
+   text-align: center;
+   background-color: white;
+ }
+
+ .container {
+  width: 100%;
+ }
+
+ .card-title {
+  margin-top: 3.00em;
+ }
+
+ .card p {
+  line-height: 1.00em;
+  font-weight: bold;
+ }
 
 </style>
   </head>
   <body>
-    <h1>Isotope Filter</h1>
 
-<div class="col-lg-12">
-<h4>filter by: Category</h4>
-<div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
-  <button class="button" data-filter=".wire-and-cable">Wire & Cable</button>
-  <button class="button" data-filter=".wire-and-cable-accessories">Wire & Cable Accessories</button>
-  <button class="button" data-filter=".conduit-and-fittings">Conduit & Fittings</button>
-  <button class="button" data-filter=".wiring-devices">Wiring Devices</button>
-  <button class="button" data-filter=".enclosures-and-wireways">Enclosures & Wireways</button>
-  <button class="button" data-filter=".lighting">Lighting</button>
-  <button class="button" data-filter=".fuses">Fuses</button>
-  <button class="button" data-filter=".tools-and-fasteners">Tools & Fasteners</button>
-  <button class="button" data-filter=".motor-control">Motor Control</button>
-  <button class="button" data-filter=".specialty">Specialty</button>
 
-</div>
-</div>
 
-<div class="col-lg-12">
-<h2>filter by: State</h2>
-<div id="filters-states" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
-  <button class="button" data-filter=".texas">Texas</button>
-  <button class="button" data-filter=".oklahoma">Oklahoma</button>
-  <button class="button" data-filter=".arkansas">Arkansas</button>
-  
-</div>
-</div>
+
 
 
 <!-- 
@@ -208,6 +207,38 @@ body {
   <button class="button" data-sort-by="category">category</button>
 </div>
  -->
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+
+
+    <h1 class="display-3">Our Manufacturers</h1>
+
+<h3>States</h3>
+<div id="filters-states" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
+  <button class="button" data-filter=".texas">Texas</button>
+  <button class="button" data-filter=".oklahoma">Oklahoma</button>
+  <button class="button" data-filter=".arkansas">Arkansas</button>
+  
+</div>
+
+
+<div class="col-lg-12">
+<h4>Categories</h4>
+<div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
+  <button class="button" data-filter=".wire-and-cable">Wire & Cable</button>
+  <button class="button" data-filter=".wire-and-cable-accessories">Wire & Cable Accessories</button>
+  <button class="button" data-filter=".conduit-and-fittings">Conduit & Fittings</button>
+  <button class="button" data-filter=".wiring-devices">Wiring Devices</button>
+  <button class="button" data-filter=".enclosures-and-wireways">Enclosures & Wireways</button>
+  <button class="button" data-filter=".lighting">Lighting</button>
+  <button class="button" data-filter=".fuses">Fuses</button>
+  <button class="button" data-filter=".tools-and-fasteners">Tools & Fasteners</button>
+  <button class="button" data-filter=".motor-control">Motor Control</button>
+  <button class="button" data-filter=".specialty">Specialty</button>
+
+</div>
+</div>
 <div class="grid">
   <div class="card element-item specialty texas oklahoma arkansas" data-filter="specialty texas oklahoma arkansas" style="width: 15rem;">
     <div class="card-block">
@@ -414,20 +445,15 @@ body {
    
   </div>
 
-
-  
-
-
-
 </div>
+
+
 
    
 
 
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Main Isotope Source Must Include --> 
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script>
 // external js: isotope.pkgd.js
@@ -618,7 +644,7 @@ console.log("Filters Enabled.");
 
 // bind filter button click
 $('#filters').on( 'click', 'button', function() {
-  console.log("Filter Button Initialized.");
+  console.log("Filter category action.");
   var filterValue = $( this ).attr('data-filter');
   // use filterFn if matches value
   filterValue = filterFns[ filterValue ] || filterValue;
@@ -627,7 +653,7 @@ $('#filters').on( 'click', 'button', function() {
 });
 
 $('#filters-states').on( 'click', 'button', function() {
-  console.log("Filter Button Initialized.");
+  console.log("Filter state action.");
   var filterValue = $( this ).attr('data-filter');
   // use filterFn if matches value
   filterValue = filterFns[ filterValue ] || filterValue;
